@@ -1,0 +1,427 @@
+.fmpa-button {
+  padding: 10px 16px;
+  background: linear-gradient(135deg, #2E75B6 0%, #1a5a9a 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.fmpa-button:hover {
+  background: linear-gradient(135deg, #1a5a9a 0%, #0f3d6b 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(30, 117, 182, 0.3);
+}
+
+.fmpa-modal-bg {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 9000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.fmpa-modal-bg.open {
+  display: flex;
+}
+
+.fmpa-modal {
+  background: white;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.4);
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fmpa-modal-header {
+  background: linear-gradient(135deg, #2E75B6 0%, #1a5a9a 100%);
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 12px 12px 0 0;
+  position: sticky;
+  top: 0;
+}
+
+.fmpa-modal-header h2 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.fmpa-close {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.fmpa-close:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.fmpa-modal-body {
+  padding: 20px;
+}
+
+.fmpa-search-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.fmpa-search-input {
+  flex: 1;
+  padding: 12px 16px;
+  border: 1.5px solid #C5D8ED;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #1F3864;
+  background: white;
+}
+
+.fmpa-search-input:focus {
+  border-color: #2E75B6;
+  outline: none;
+}
+
+.fmpa-btn-add {
+  padding: 12px 16px;
+  background: #2E75B6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+}
+
+.fmpa-btn-add:hover {
+  background: #1a5a9a;
+}
+
+.fmpa-loading,
+.fmpa-no-results {
+  text-align: center;
+  padding: 40px 20px;
+  color: #5A7A9A;
+  font-size: 14px;
+}
+
+.fmpa-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.fmpa-card {
+  background: white;
+  border-radius: 10px;
+  border: 1px solid #C5D8ED;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.fmpa-card:hover {
+  border-color: #2E75B6;
+  box-shadow: 0 4px 12px rgba(46, 117, 182, 0.1);
+  transform: translateY(-2px);
+}
+
+.fmpa-card-header {
+  background: linear-gradient(135deg, #F0F6FC 0%, #E8ECFC 100%);
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #C5D8ED;
+}
+
+.fmpa-card-header strong {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1F3864;
+}
+
+.fmpa-date {
+  font-size: 12px;
+  color: #5A7A9A;
+  font-weight: 600;
+}
+
+.fmpa-card-body {
+  padding: 12px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.fmpa-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.fmpa-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #5A7A9A;
+  text-transform: uppercase;
+  min-width: 60px;
+}
+
+.fmpa-value {
+  font-size: 12px;
+  color: #1F3864;
+  font-weight: 600;
+}
+
+/* Edit Form */
+.fmpa-edit-header,
+.fmpa-detail-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 2px solid #C5D8ED;
+}
+
+.fmpa-edit-header h3,
+.fmpa-detail-header h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #1F3864;
+  margin: 0;
+}
+
+.fmpa-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.fmpa-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fmpa-form-group label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #5A7A9A;
+  text-transform: uppercase;
+}
+
+.fmpa-form-group input,
+.fmpa-form-group textarea {
+  padding: 10px 12px;
+  border: 1.5px solid #C5D8ED;
+  border-radius: 6px;
+  font-size: 12px;
+  color: #1F3864;
+  background: white;
+  font-family: inherit;
+}
+
+.fmpa-form-group input:focus,
+.fmpa-form-group textarea:focus {
+  border-color: #2E75B6;
+  outline: none;
+}
+
+.fmpa-form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.fmpa-edit-footer,
+.fmpa-detail-footer {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  padding-top: 15px;
+  border-top: 1px solid #EBF3FB;
+}
+
+.fmpa-btn-save,
+.fmpa-btn-edit {
+  padding: 10px 16px;
+  background: #2E75B6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.fmpa-btn-save:hover,
+.fmpa-btn-edit:hover {
+  background: #1a5a9a;
+}
+
+.fmpa-btn-delete {
+  padding: 10px 16px;
+  background: #C00000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.fmpa-btn-delete:hover {
+  background: #8B0000;
+}
+
+.fmpa-btn-cancel,
+.fmpa-btn-close {
+  padding: 10px 16px;
+  background: #F0F0F0;
+  color: #666;
+  border: 1px solid #C5D8ED;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.fmpa-btn-cancel:hover,
+.fmpa-btn-close:hover {
+  background: #E0E0E0;
+}
+
+/* Detail View */
+.fmpa-detail-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+  padding: 16px;
+  background: #F0F6FC;
+  border-radius: 8px;
+}
+
+.fmpa-detail-row {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.fmpa-detail-row.full-width {
+  flex-direction: column;
+  gap: 6px;
+}
+
+.fmpa-detail-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: #5A7A9A;
+  text-transform: uppercase;
+  min-width: 100px;
+}
+
+.fmpa-detail-value {
+  font-size: 13px;
+  color: #1F3864;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.fmpa-gps-link {
+  color: #2E75B6;
+  text-decoration: none;
+  border-bottom: 1px dotted #2E75B6;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.fmpa-gps-link:hover {
+  color: #1a5a9a;
+  border-bottom-color: #1a5a9a;
+}
+
+@media (max-width: 768px) {
+  .fmpa-modal {
+    max-width: 90vw;
+    max-height: 90vh;
+  }
+
+  .fmpa-search-box {
+    flex-direction: column;
+  }
+
+  .fmpa-search-input {
+    width: 100%;
+  }
+
+  .fmpa-btn-add {
+    width: 100%;
+  }
+
+  .fmpa-edit-footer,
+  .fmpa-detail-footer {
+    flex-direction: column;
+  }
+
+  .fmpa-btn-save,
+  .fmpa-btn-edit,
+  .fmpa-btn-delete,
+  .fmpa-btn-cancel,
+  .fmpa-btn-close {
+    width: 100%;
+  }
+
+  .fmpa-row {
+    flex-direction: column;
+  }
+
+  .fmpa-detail-row {
+    flex-direction: column;
+  }
+
+  .fmpa-detail-label {
+    min-width: auto;
+  }
+}
